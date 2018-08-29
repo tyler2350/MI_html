@@ -1,1 +1,2 @@
-# 仿小米页面,纯css实现Slider效果
+# 仿小米页面,纯css实现Slider效果  
+[效果展示页面](https://htmlpreview.github.io/?https://github.com/L-WJ1995/MI_html/blob/master/%E7%BA%AFcss%E5%AE%9E%E7%8E%B0%E5%B0%8F%E7%B1%B3%E9%A6%96%E9%A1%B5%E7%89%B9%E6%95%88.html)
