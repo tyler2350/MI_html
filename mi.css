@@ -1,0 +1,1680 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    min-width: 1226px;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    position: relative;
+    z-index: 100;
+}
+
+header>div:first-child {
+    width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    font-size: 12px;
+}
+
+.header-ul1 li {
+    display: inline-block;
+    float: left;
+    color: #424242;
+    font-weight: lighter;
+    line-height: 40px;
+}
+
+.header-ul1 li a,
+.header-ul2 li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.header-ul2 li {
+    display: inline-block;
+    color: #424242;
+    font-weight: lighter;
+    line-height: 40px;
+}
+
+.header-ul2 {
+    float: right;
+}
+
+.cart {
+    position: relative;
+    float: right;
+    height: 40px;
+    width: 120px;
+    background-color: #424242;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 20px;
+    color: #b0b0b0;
+    transition: background-color 0.2s 0.35s linear, color 0.2s 0.35s;
+}
+
+.cart>div {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(http://thyrsi.com/t6/359/1534587756x-1376440240.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    vertical-align: -4px;
+    transition: all 0.2s 0.35s linear;
+}
+
+.cart:before {
+    content: '购物车中还没有商品，赶紧选购吧！';
+    position: absolute;
+    z-index: -50;
+    display: inline-block;
+    width: 318px;
+    height: 95px;
+    line-height: 95px;
+    font-size: 12px;
+    background-color: white;
+    color: black;
+    top: -55px;
+    right: 0px;
+    transition: 0.2s 0.35s linear;
+}
+
+.cart:hover:before {
+    top: 40px;
+    box-shadow: 0px 2px 5px 0px rgba( 0, 0, 0, 0.5);
+    transition: 0.2s 0.1s linear;
+}
+
+.cart:hover {
+    background-color: white;
+    color: #ff6700;
+    transition: 0.2s 0.1s linear;
+}
+
+.cart:hover div {
+    background-image: url(http://thyrsi.com/t6/359/1534587867x-1376440156.png);
+    transition: all 0.2s 0.1s linear;
+}
+
+.box {
+    min-width: 1226px;
+    xoverflow: hidden;
+    height: 3000px;
+}
+
+.box-menu {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 50;
+}
+
+.menu {
+    height: 100px;
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 100px;
+    position: relative;
+}
+
+.hide {
+    width: 800px;
+    height: 30px;
+    position: absolute;
+    background-color: transparent;
+    left: 140px;
+}
+
+.mi-logo {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-color: #ff6700;
+    background-image: url(https://s01.mifile.cn/i/mi-logo.png);
+    vertical-align: middle;
+    background-position: center;
+    margin-right: 90px;
+}
+
+.mi-logo>a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+}
+
+.menu-1 {
+    display: inline-block;
+    font-size: 0px;
+    height: 0px;
+}
+
+.menu-1>a:first-child {
+    margin-left: 30px;
+}
+
+.menu-1>a {
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 17px;
+    height: 100px;
+}
+
+.menu-1>a:hover {
+    position: relative;
+    padding: 0 34px;
+    left: -17px;
+    margin: 0px;
+    color: #ff6700;
+}
+
+.menu-1>a:first-child:hover {
+    left: -34px;
+    margin-left: 30px;
+    padding: 0 34px 0 34px;
+}
+
+.menu-1>a:first-child:hover~a {
+    position: relative;
+    left: -51px;
+}
+
+.menu-1>a:hover~a {
+    position: relative;
+    left: -34px;
+}
+
+.menu-1>a:first-child:hover~a:nth-last-of-type(1) {
+    position: relative;
+    left: -34px;
+    margin-right: 0px;
+}
+
+.menu-1>a:hover~a:nth-last-of-type(1) {
+    position: relative;
+    left: -17px;
+    margin-left: 0px;
+}
+
+.menu-1>a:nth-last-of-type(1):hover {
+    position: relative;
+    left: -17px;
+    margin-left: 0px;
+    padding: 0 31px 0 34px;
+}
+
+.submenu {
+    position: absolute;
+    /*定位到menu*/
+    z-index: 60;
+    width: 3000px;
+    height: 0px;
+    /*测试230 开启0*********************************************************************************************************************/
+    top: 100px;
+    left: -1000px;
+    background-color: white;
+    border-top: 0px solid rgba( 0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px 0px rgba( 0, 0, 0, 0.2);
+    overflow: hidden;
+    /*下拉菜单上滑隐藏*/
+    transition: height 0.3s 0.3s, border-top 0s 0.6s;
+}
+
+.submenu-1 {
+    width: 1226px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+    /*错误*/
+    background-color: white;
+}
+
+.submenu-1 li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 30px 0;
+    display: inline-block;
+    xborder: 1px solid;
+    visibility: hidden;
+    transition: visibility 0s 999999999999999s;
+}
+
+.submenu-1 li a {
+    font-size: 13px;
+    position: relative;
+    font-weight: 400;
+    color: #333;
+    color: black;
+    display: inline-block;
+    margin: 0px 15px 0 15px;
+    padding-top: 52px;
+    width: 170px;
+    height: 168px;
+    line-height: 25px;
+    vertical-align: middle;
+    xborder: 1px solid red;
+    text-align: center;
+}
+
+
+.submenu-1 li a img {
+    width: 170px;
+    height: 120px;
+    margin-top: -33px;
+    xborder: 1px solid;
+}
+
+.menu-1>a:hover~.submenu .submenu-1 li {
+
+    transition: none 0s 0s;
+}
+
+.menu-1>a:nth-of-type(1):hover~.submenu .submenu-1 li:nth-of-type(1),
+.menu-1>a:nth-of-type(2):hover~.submenu .submenu-1 li:nth-of-type(2),
+.menu-1>a:nth-of-type(3):hover~.submenu .submenu-1 li:nth-of-type(3),
+.menu-1>a:nth-of-type(4):hover~.submenu .submenu-1 li:nth-of-type(4),
+.menu-1>a:nth-of-type(5):hover~.submenu .submenu-1 li:nth-of-type(5),
+.menu-1>a:nth-of-type(6):hover~.submenu .submenu-1 li:nth-of-type(6),
+.menu-1>a:nth-of-type(7):hover~.submenu .submenu-1 li:nth-of-type(7),
+.menu-1>a:nth-of-type(8):hover~.submenu .submenu-1 li:nth-of-type(8) {
+    visibility: visible;
+    transition: visibility 0s 0s;
+}
+
+.submenu .submenu-1 li span {
+    position: absolute;
+    width: 0px;
+    height: 50%;
+    top: 50px;
+    border: 0.5px solid #e0e0e0;
+}
+
+.submenu .submenu-1 li span:nth-of-type(1) {}
+
+.submenu .submenu-1 li span:nth-of-type(2) {
+    left: 400px;
+}
+
+.submenu .submenu-1 li span:nth-of-type(3) {
+    left: 600px;
+}
+
+.submenu .submenu-1 li span:nth-of-type(4) {
+    left: 800px;
+}
+
+.submenu .submenu-1 li span:nth-of-type(5) {
+    left: 1000px;
+}
+
+.submenu .submenu-1 li span:nth-of-type(6) {
+    left: 1200px;
+}
+
+
+
+
+
+
+
+
+.submenu:hover {
+    height: 230px;
+    border-top: 1px solid rgba( 0, 0, 0, 0.2);
+}
+
+.menu-1>a:hover~.submenu {
+    height: 230px;
+    border-top: 1px solid rgba( 0, 0, 0, 0.2);
+    transition: height 0.3s 0.1s, border-top 0s 0.1s;
+}
+
+.menu-1>a:nth-of-type(n + 9):hover~.submenu {
+    height: 0px;
+    border-top: 0px solid rgba( 0, 0, 0, 0.2);
+    transition: height 0.3s 0.1s, border-top 0s 0.4s;
+    /*需要注意 border:none 没有动画 border不指定边框样式就无效*/
+}
+
+
+/************************************子菜单栏说明******************************************/
+
+.menu-tip:before {
+    position: absolute;
+    color: #ff6700;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: 400;
+    width: 70px;
+    height: 18px;
+    top: -30px;
+    left: calc((100% - 70px)/2);
+    border: 1px solid #ff6700;
+}
+
+.xp:before {
+    content: "新品";
+}
+
+.rm:before {
+    content: "热卖";
+}
+
+.drl:before {
+    content: "大容量";
+}
+
+.sqz:before {
+    content: "双千兆";
+}
+
+.spsh:before {
+    content: "双频双核";
+}
+
+.by:before {
+    content: "包邮";
+}
+
+.hplq:before {
+    content: "航拍利器";
+}
+
+.menu-price:after {
+    position: absolute;
+    color: #ff6700;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 11px;
+    font-weight: 400;
+    width: 70px;
+    height: 18px;
+    bottom: -13.9px;
+    left: calc((100% - 70px)/2);
+}
+
+.mi8:after {
+    content: "2699元起";
+}
+
+.mi8se:after {
+    content: "1799元起";
+}
+
+.mix2s:after {
+    content: "3299元起";
+}
+
+.mix2:after {
+    content: "2599元起";
+}
+
+.mi6x:after {
+    content: "1599元起";
+}
+
+.max2:after {
+    content: "1399元起";
+}
+
+.hminote5:after {
+    content: "1099元起";
+}
+
+.hmis2:after {
+    content: "999元起";
+}
+
+.hmi5p:after {
+    content: "999元起";
+}
+
+.hmi5:after {
+    content: "799元起";
+}
+
+.hmi5a:after {
+    content: "599元起";
+}
+
+.tv475:after {
+    content: "8999元起";
+}
+
+.tv4a32:after {
+    content: "849元起";
+}
+
+.tv4a43:after {
+    content: "1399元起";
+}
+
+.tv4a50:after {
+    content: "1899元起";
+}
+
+.tv4a55:after {
+    content: "2499元起";
+}
+
+.xmds:after {
+    content: "小米电视";
+    color: #333;
+}
+
+.yxb:after {
+    content: "5999元起";
+}
+
+.bjbpro:after {
+    content: "5599元起";
+}
+
+.bjbair:after {
+    content: "3599元起";
+}
+
+.box4:after {
+    content: "299元起";
+}
+
+.box4c:after {
+    content: "199元起";
+}
+
+.box3s:after {
+    content: "299元起";
+}
+
+.box3c:after {
+    content: "199元起";
+}
+
+.box3pro:after {
+    content: "399元起";
+}
+
+.jtyy:after {
+    content: "2099元起";
+}
+
+.mzn:after {
+    content: "199元起";
+}
+
+.tstyj:after {
+    content: "249元起";
+}
+
+.dcl:after {
+    content: "299元起";
+}
+
+.ztg:after {
+    content: "99元起";
+}
+
+.txd:after {
+    content: "199元起";
+}
+
+.wifi3a:after {
+    content: "109元起";
+}
+
+.wifihd:after {
+    content: "499元起";
+}
+
+.wifi3g:after {
+    content: "209元起";
+}
+
+.wifi4:after {
+    content: "199元起";
+}
+
+.wifi3c:after {
+    content: "79元起";
+}
+
+.wififd:after {
+    content: "79元起";
+}
+
+.aimini:after {
+    content: "169元起";
+}
+
+.wrj:after {
+    content: "2999元起";
+}
+
+.jsq:after {
+    content: "1499元起";
+}
+
+.jqr:after {
+    content: "1699元起";
+}
+
+.ih:after {
+    content: "999元起";
+}
+
+.znyj:after {
+    content: "智能硬件";
+    color: #333;
+}
+
+
+/************************************子菜单栏说明******************************************/
+
+.div-search {
+    display: inline-block;
+    float: right;
+    font-size: 0;
+    height: 0px;
+    position: relative;
+    z-index: 50;
+}
+
+.search {
+    width: 223px;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    xline-height: 48px;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.div-search button {
+    height: 48px;
+    width: 53px;
+    vertical-align: middle;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    background-color: white;
+    background-image: url(http://thyrsi.com/t6/359/1534587626x1822611251.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 25px;
+    cursor: pointer;
+}
+
+.div-search:hover .search {
+    border-color: rgba( 0, 0, 0, 0.3);
+}
+
+.div-search:hover button {
+    border-color: rgba( 0, 0, 0, 0.3);
+}
+
+.div-search .search:focus {
+    border-color: #ff6700;
+}
+
+.div-search .search:focus+button {
+    border-color: #ff6700;
+}
+
+.div-search button:hover {
+    background-color: #ff6700;
+    border-color: #ff6700;
+}
+
+.div-search ul {
+    background-color: red;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 73px;
+}
+
+.div-search li {
+    top: 100;
+    list-style-type: none;
+    height: 30px;
+    width: 0px;
+    line-height: 30px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.div-search li:first-child {
+    border-top: 1px solid #ff6700;
+}
+
+.div-search li:last-child {
+    border-bottom: 1px solid #ff6700;
+}
+
+.div-search li a {
+    color: #424242;
+    font-size: 13px;
+    display: inline-block;
+    width: 223px;
+    padding: 0 15px;
+}
+
+.div-search li span {
+    float: right;
+    color: #b0b0b0;
+}
+
+.div-search li:hover {
+    width: 223px;
+    font-size: 13px;
+}
+
+.div-search li a:hover {
+    background-color: rgba( 0, 0, 0, 0.05);
+}
+
+.div-search .search:focus~ul li:nth-of-type(1) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(2) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.1s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(3) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.15s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(4) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.2s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(5) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.25s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(6) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.3s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(7) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.35s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(8) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.4s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(9) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.45s, background-color 0.0s;
+}
+
+.div-search .search:focus~ul li:nth-of-type(10) {
+    width: 223px;
+    font-size: 13px;
+    border-left: 1px solid #ff6700;
+    border-right: 1px solid #ff6700;
+    transition: 0.3s 0.5s, background-color 0.0s;
+}
+
+.div-search>form>a {
+    font-size: 11px;
+    position: absolute;
+    line-height: 20px;
+    color: #757575;
+    background-color: #eee;
+    cursor: pointer;
+    padding: 0 5px;
+    top: 41px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.div-search>form>a:first-of-type {
+    left: 105px;
+}
+
+.div-search>form>a:last-of-type {
+    left: 150px;
+}
+
+.div-search>form>a:hover {
+    background-color: #ff6700;
+    color: #fff;
+}
+
+.div-search>form>.search:invalid~a {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.div-search>form>.search:focus~a {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.box-2 {
+    width: 100%;
+    height: 100%;
+    padding: 0 calc((100% - 1226px)/2);
+    position: relative;
+}
+
+.detail-menu {
+    width: 1226px;
+    height: 460px;
+}
+
+.detail-menu ul {
+    padding: 20px 0;
+    display: inline-block;
+    width: 234px;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 20;
+}
+
+.detail-menu ul li {
+    list-style: none;
+}
+
+.detail-menu ul li:hover {
+    background-color: #ff6700;
+}
+
+.detail-menu ul li>a {
+    color: white;
+    font-size: 14px;
+    padding: 0 15px 0 30px;
+    display: inline-block;
+    height: 42px;
+    width: 100%;
+    line-height: 42px;
+    position: relative;
+}
+
+.detail-menu ul li>a:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    height: 100%;
+    width: 20%;
+    background-size: auto 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(http://thyrsi.com/t6/359/1534588078x-1376440240.png);
+}
+
+
+.detail-menu ul li div {
+    position: absolute;
+    left: 234px;
+    width: 0;
+    height: 0;
+    top: 0;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 3px 3px 5px 0px rgba( 0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: 1s;
+}
+
+.detail-menu ul li div table {
+    border-collapse: collapse;
+}
+
+.detail-menu ul li div table tr td a {
+    display: block;
+    width: 265px;
+    height: calc(460px / 6);
+    padding: 18px 20px;
+    line-height: 40px;
+    font-size: 13px;
+    color: black;
+    position: relative;
+}
+
+.detail-menu ul li div table tr td a img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.detail-menu ul li div table tr td a:hover {
+    color: #ff6700;
+    background-color: rgba(255, 165, 0, 0.39);
+    transition: background-color 1s linear;
+}
+
+
+.detail-menu ul li div table tr td a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: rgba( 0, 0, 0, 0.35);
+    transition: width .35s linear;
+}
+
+
+.detail-menu ul li div table tr td a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 5px;
+    background-color: rgba( 0, 0, 0, 0.35);
+    transition: width .35s linear;
+}
+
+
+
+
+.detail-menu ul li div table tr td a:hover:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transition: width .35s linear;
+}
+
+.detail-menu ul li div table tr td a:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transition: width .35s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.detail-menu ul li:nth-of-type(1):hover>div {
+    width: calc(265px * 3);
+    height: 100%;
+    transition: 1s;
+}
+
+.detail-menu ul li:nth-of-type(2):hover>div {
+    width: calc(265px * 3);
+    height: 100%;
+    transition: width 0s, height 1s;
+}
+
+.detail-menu ul li:nth-of-type(3):hover>div {
+    width: calc(265px * 3);
+    height: 100%;
+    transition: width 1s, height 0s;
+}
+
+.detail-menu ul li:nth-of-type(4):hover>div {
+    width: calc(265px * 3);
+    height: 100%;
+    transition: 1s;
+}
+
+
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+
+/*轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始-----------------------------轮播图动画开始*/
+
+.lbt {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: -460px;
+    z-index: 10;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.lbt-fade {
+    position: absolute;
+    height: 100%;
+    width: 600%;
+}
+
+.lbt-fade a {
+    display: inline-block;
+    width: calc(100% / 6);
+    height: 100%;
+}
+
+.lbt-fade a img {
+    width: 100%;
+    height: 100%;
+}
+
+.lbt label[class*="lbt-"] {
+    position: absolute;
+    z-index: 1;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    bottom: 40px;
+    text-align: center;
+}
+
+.lbt input {
+    display: none;
+}
+
+.lbt label[class*="lbt-"]:before {
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    width: 7.5px;
+    height: 7.5px;
+    vertical-align: middle;
+    border-radius: 7.5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.lbt .lbt-a1 {
+    right: 190px;
+}
+
+.lbt .lbt-a2 {
+    right: 160px;
+}
+
+.lbt .lbt-a3 {
+    right: 130px;
+}
+
+.lbt .lbt-a4 {
+    right: 100px;
+}
+
+.lbt .lbt-a5 {
+    right: 70px;
+}
+
+.lbt .lbt-a6 {
+    right: 40px;
+}
+
+.lbt .qh-1a,
+.lbt .qh-1b,
+.lbt .qh-1c,
+.lbt .qh-1d,
+.lbt .qh-1e,
+.lbt .qh-1f {
+    cursor: pointer;
+    position: absolute;
+    height: 69px;
+    width: 41px;
+    z-index: 1;
+    left: 234px;
+    top: calc(50% - 34.5px);
+    background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+    background-position: 67% center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+
+
+.lbt .qh-2a,
+.lbt .qh-2b,
+.lbt .qh-2c,
+.lbt .qh-2d,
+.lbt .qh-2e,
+.lbt .qh-2f {
+    cursor: pointer;
+    position: absolute;
+    height: 69px;
+    width: 41px;
+    z-index: 1;
+    left: calc(100% - 41px);
+    top: calc(50% - 34.5px);
+    background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
+
+
+
+
+
+
+.lbt-fade {
+    animation: fade1 24s steps(1) infinite alternate, fade2 24s linear infinite alternate;
+}
+
+@keyframes fade1 {
+    0% {
+        margin: 0 0 0 -0%;
+    }
+    16.3% {
+        margin: 0 0 0 -100%;
+    }
+    33.333% {
+        margin: 0 0 0 -200%;
+    }
+    50% {
+        margin: 0 0 0 -300%;
+    }
+    66.667% {
+        margin: 0 0 0 -400%;
+    }
+    83.333% {
+        margin: 0 0 0 -500%;
+    }
+    100% {
+        margin: 0 0 0 -600%;
+    }
+}
+
+@keyframes fade2 {
+    0%,
+    15.667% {
+        opacity: 1;
+    }
+    16.667% {
+        opacity: 0;
+    }
+    17.667%,
+    32.333% {
+        opacity: 1;
+    }
+    33.333% {
+        opacity: 0;
+    }
+    34.333%,
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    51%,
+    65.667% {
+        opacity: 1;
+    }
+    66.667% {
+        opacity: 0;
+    }
+    67.667%,
+    82.333% {
+        opacity: 1;
+    }
+    83.333% {
+        opacity: 0;
+    }
+    84.333%,
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.lbt-a1:before {
+    animation: fadelbta1 24s steps(1) infinite alternate;
+}
+
+.lbt-a2:before {
+    animation: fadelbta2 24s steps(1) infinite alternate;
+}
+
+.lbt-a3:before {
+    animation: fadelbta3 24s steps(1) infinite alternate;
+}
+
+.lbt-a4:before {
+    animation: fadelbta4 24s steps(1) infinite alternate;
+}
+
+.lbt-a5:before {
+    animation: fadelbta5 24s steps(1) infinite alternate;
+}
+
+.lbt-a6:before {
+    animation: fadelbta6 24s steps(1) infinite alternate;
+}
+
+@keyframes fadelbta1 {
+    0% {
+        background-color: white;
+    }
+    16.667%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes fadelbta2 {
+    0%,
+    16.667% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    16.667%,
+    33.333% {
+        background-color: white;
+    }
+    33.333%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes fadelbta3 {
+    0%,
+    33.333% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    33.333%,
+    50% {
+        background-color: white;
+    }
+    50%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes fadelbta4 {
+    0%,
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    50%,
+    66.667% {
+        background-color: white;
+    }
+    66.667%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes fadelbta5 {
+    0%,
+    66.667% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    66.667%,
+    83.333% {
+        background-color: white;
+    }
+    83.333%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes fadelbta6 {
+    0%,
+    83.333% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    83.333%,
+    100% {
+        background-color: white;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+
+
+
+
+.lbt .qh-1a,
+.lbt .qh-2a {
+    animation: fadelqh-a 24s steps(1) infinite alternate;
+}
+
+.lbt .qh-1b,
+.lbt .qh-2b {
+    animation: fadelqh-b 24s steps(1) infinite alternate;
+}
+
+.lbt .qh-1c,
+.lbt .qh-2c {
+    animation: fadelqh-c 24s steps(1) infinite alternate;
+}
+
+.lbt .qh-1d,
+.lbt .qh-2d {
+    animation: fadelqh-d 24s steps(1) infinite alternate;
+}
+
+.lbt .qh-1e,
+.lbt .qh-2e {
+    animation: fadelqh-e 24s steps(1) infinite alternate;
+}
+
+.lbt .qh-1f,
+.lbt .qh-2f {
+    animation: fadelqh-f 24s steps(1) infinite alternate;
+}
+
+@keyframes fadelqh-a {
+    0% {
+        visibility: visible;
+    }
+    16.667%,
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes fadelqh-b {
+    0%,
+    16.667% {
+        visibility: hidden;
+    }
+    16.667%,
+    33.333% {
+        visibility: visible;
+    }
+    33.333%,
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes fadelqh-c {
+    0%,
+    33.333% {
+        visibility: hidden;
+    }
+    33.333%,
+    50% {
+        visibility: visible;
+    }
+    50%,
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes fadelqh-d {
+    0%,
+    50% {
+        visibility: hidden;
+    }
+    50%,
+    66.667% {
+        visibility: visible;
+    }
+    66.667%,
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes fadelqh-e {
+    0%,
+    66.667% {
+        visibility: hidden;
+    }
+    66.667%,
+    83.333% {
+        visibility: visible;
+    }
+    83.333%,
+    100% {
+        visibility: hidden
+    }
+}
+
+@keyframes fadelqh-f {
+    0%,
+    83.333% {
+        visibility: hidden;
+    }
+    83.333%,
+    100% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+label[class*="qh-1"]:hover {
+    background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+    background-position: 0% center;
+    background-repeat: no-repeat;
+}
+
+label[class*="qh-2"]:hover {
+    background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+    background-position: 33% center;
+    background-repeat: no-repeat;
+}
+
+
+
+.lbt input:checked~label,
+.lbt input:checked~label:before {
+    animation: fadelbta1 0s, fadelbta2 0s, fadelbta3 0s, fadelbta4 0s, fadelbta5 0s, fadelbta6 0s, fadelqh-a 0s, fadelqh-b 0s, fadelqh-c 0s, fadelqh-d 0s, fadelqh-e 0s, fadelqh-f 0s;
+}
+
+
+
+#qh-1a:checked~.lbt-fade {
+    margin: 0 0 0 -500%;
+}
+
+#qh-1b:checked~.lbt-fade {
+    margin: 0 0 0 -0%;
+}
+
+#qh-1c:checked~.lbt-fade {
+    margin: 0 0 0 -100%;
+}
+
+#qh-1d:checked~.lbt-fade {
+    margin: 0 0 0 -200%;
+}
+
+#qh-1e:checked~.lbt-fade {
+    margin: 0 0 0 -300%;
+}
+
+#qh-1f:checked~.lbt-fade {
+    margin: 0 0 0 -400%;
+}
+
+#qh-2a:checked~.lbt-fade {
+    margin: 0 0 0 -100%;
+}
+
+#qh-2b:checked~.lbt-fade {
+    margin: 0 0 0 -200%;
+}
+
+#qh-2c:checked~.lbt-fade {
+    margin: 0 0 0 -300%;
+}
+
+#qh-2d:checked~.lbt-fade {
+    margin: 0 0 0 -400%;
+}
+
+#qh-2e:checked~.lbt-fade {
+    margin: 0 0 0 -500%;
+}
+
+#qh-2f:checked~.lbt-fade {
+    margin: 0 0 0 -0%;
+}
+
+
+
+
+
+
+
+#qh-1a:checked~.qh-1f,
+#qh-1a:checked~.qh-2f,
+#qh-2a:checked~.qh-1b,
+#qh-2a:checked~.qh-2b,
+#qh-1b:checked~.qh-1a,
+#qh-1b:checked~.qh-2a,
+#qh-2b:checked~.qh-1c,
+#qh-2b:checked~.qh-2c,
+#qh-1c:checked~.qh-1b,
+#qh-1c:checked~.qh-2b,
+#qh-2c:checked~.qh-1d,
+#qh-2c:checked~.qh-2d,
+#qh-1d:checked~.qh-1c,
+#qh-1d:checked~.qh-2c,
+#qh-2d:checked~.qh-1e,
+#qh-2d:checked~.qh-2e,
+#qh-1e:checked~.qh-1d,
+#qh-1e:checked~.qh-2d,
+#qh-2e:checked~.qh-1f,
+#qh-2e:checked~.qh-2f,
+#qh-1f:checked~.qh-1e,
+#qh-1f:checked~.qh-2e,
+#qh-2f:checked~.qh-1a,
+#qh-2f:checked~.qh-2a {
+    visibility: visible;
+}
+
+
+
+#qh-1a:checked~.lbt-a6:before,
+#qh-2a:checked~.lbt-a2:before,
+#qh-1b:checked~.lbt-a1:before,
+#qh-2b:checked~.lbt-a3:before,
+#qh-1c:checked~.lbt-a2:before,
+#qh-2c:checked~.lbt-a4:before,
+#qh-1d:checked~.lbt-a3:before,
+#qh-2d:checked~.lbt-a5:before,
+#qh-1e:checked~.lbt-a4:before,
+#qh-2e:checked~.lbt-a6:before,
+#qh-1f:checked~.lbt-a5:before,
+#qh-2f:checked~.lbt-a1:before {
+    background-color: white;
+}
+
+
+
+
+
+label[class*="lbt-"]:hover:before {
+    background-color: white;
+}
+
+label[class*="lbt-"]:hover:before {
+    animation: fadelbta1 0s, fadelbta2 0s, fadelbta3 0s, fadelbta4 0s, fadelbta5 0s, fadelbta6 0s;
+}
+
+
+#lbt-a1:checked~.lbt-a1:before,
+#lbt-a2:checked~.lbt-a2:before,
+#lbt-a3:checked~.lbt-a3:before,
+#lbt-a4:checked~.lbt-a4:before,
+#lbt-a5:checked~.lbt-a5:before,
+#lbt-a6:checked~.lbt-a6:before {
+    background-color: white;
+}
+
+
+
+
+.lbt input:checked~.lbt-fade {
+    animation: fade1 0s, fade2 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#lbt-a1:checked~.lbt-fade {
+
+    margin: 0 0 0 0%;
+}
+
+#lbt-a2:checked~.lbt-fade {
+
+    margin: 0 0 0 -100%;
+}
+
+#lbt-a3:checked~.lbt-fade {
+
+    margin: 0 0 0 -200%;
+}
+
+#lbt-a4:checked~.lbt-fade {
+
+    margin: 0 0 0 -300%;
+}
+
+#lbt-a5:checked~.lbt-fade {
+
+    margin: 0 0 0 -400%;
+}
+
+#lbt-a6:checked~.lbt-fade {
+
+    margin: 0 0 0 -500%;
+}
+
+
+
+
+#lbt-a1:checked~.qh-1a,
+#lbt-a1:checked~.qh-2a,
+#lbt-a2:checked~.qh-1b,
+#lbt-a2:checked~.qh-2b,
+#lbt-a3:checked~.qh-1c,
+#lbt-a3:checked~.qh-2c,
+#lbt-a4:checked~.qh-1d,
+#lbt-a4:checked~.qh-2d,
+#lbt-a5:checked~.qh-1e,
+#lbt-a5:checked~.qh-2e,
+#lbt-a6:checked~.qh-1f,
+#lbt-a6:checked~.qh-2f {
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束*/
+
+
+/*轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束*/
+
+
+/*轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束*/
+
+
+/*轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束*/
+
+
+/*轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束*/
+
+
+/*轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束-----------------------------轮播图动画结束*/
